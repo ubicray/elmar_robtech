@@ -5,4 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
+SUBDIRS(my_r2d2)
 SUBDIRS(beginner_tutorials)
+SUBDIRS(r2d2_navigator-master)

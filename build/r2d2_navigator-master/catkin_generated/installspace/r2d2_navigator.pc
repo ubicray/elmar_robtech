@@ -1,0 +1,8 @@
+prefix=/home/tudeng/elmar_robtech/install
+
+Name: r2d2_navigator
+Description: Description of r2d2_navigator
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tudeng/elmar_robtech/install/lib 
+Requires: 
