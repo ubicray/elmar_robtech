@@ -1,0 +1,8 @@
+prefix=/home/tudeng/elmar_robtech/devel
+
+Name: griffin_powermate
+Description: Description of griffin_powermate
+Version: 0.0.0
+Cflags: -I/home/tudeng/elmar_robtech/devel/include
+Libs: -L/home/tudeng/elmar_robtech/devel/lib 
+Requires: 
