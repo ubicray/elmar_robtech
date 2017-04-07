@@ -243,6 +243,15 @@
 		</collision>
 		<xacro:default_inertial mass="1"/>
 	</link>
+
+	<link name="eye">
+	</link>
+
+	<joint name="eyebox" type="fixed">
+		<parent link="box"/>
+		<child link="eye"/>
+		<origin xyz="0 0 0" rpy="-90 0 0"/>
+	</joint>
 	
 	<joint name="tobox" type="fixed">
 		<parent link="head"/>

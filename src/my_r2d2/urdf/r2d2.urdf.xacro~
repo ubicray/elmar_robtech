@@ -45,7 +45,7 @@
 	<joint name="link_to_footprint" type="fixed">
 			<parent link="base_footprint"/>
 			<child link="base_link"/>
-			<origin xyz="0 0 ${bodylen/2 + .1 +wheeldiam}" rpy="0 0 90" />
+			<origin xyz="0 0 ${bodylen/2 + .1 +wheeldiam}" rpy="0 0 -90" />
 		</joint>
 
 	<xacro:macro name="wheel" params="prefix suffix reflect">
@@ -243,6 +243,15 @@
 		</collision>
 		<xacro:default_inertial mass="1"/>
 	</link>
+
+	<link name="eye">
+	</link>
+
+	<joint name="eyebox" type="fixed">
+		<parent link="head"/>
+		<child link="eye"/>
+		<origin xyz="0 0 0" rpy="-90 0 0"/>
+	</joint>
 	
 	<joint name="tobox" type="fixed">
 		<parent link="head"/>
