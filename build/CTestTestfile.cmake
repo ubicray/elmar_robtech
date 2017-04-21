@@ -7,5 +7,6 @@
 SUBDIRS(gtest)
 SUBDIRS(griffin_powermate-master)
 SUBDIRS(my_r2d2)
+SUBDIRS(my_turtle)
 SUBDIRS(beginner_tutorials)
 SUBDIRS(r2d2_navigator-master)

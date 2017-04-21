@@ -333,6 +333,12 @@ my_r2d2_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/my_r2d2
 //Value Computed by CMake
 my_r2d2_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/my_r2d2
 
+//Value Computed by CMake
+my_turtle_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/my_turtle
+
+//Value Computed by CMake
+my_turtle_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/my_turtle
+
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
 
@@ -492,7 +498,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

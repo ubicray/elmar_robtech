@@ -7,22 +7,19 @@ import struct
 
 
 class PowermateEvent(genpy.Message):
-  _md5sum = "7c609a1e7695a65cfaa2fdba1e74ac79"
+  _md5sum = "d15e43bdf8af87dc4194680348af71e3"
   _type = "griffin_powermate/PowermateEvent"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """# Dirction values can be -1 for counter-clockwise, 0 for no, and 1 clockwise rotation
-int8 direction
+  _full_text = """string direction
 
 # Sum of direction values since the launch of the node
-int64 integral
+int64 value
 
 # TRUE while button is pressed, FALSE otherwise
 bool is_pressed
-
-# TRUE if the event was triggered by a push or a release of the button; FALSE otherwise
-bool push_state_changed"""
-  __slots__ = ['direction','integral','is_pressed','push_state_changed']
-  _slot_types = ['int8','int64','bool','bool']
+"""
+  __slots__ = ['direction','value','is_pressed']
+  _slot_types = ['string','int64','bool']
 
   def __init__(self, *args, **kwds):
     """
@@ -32,7 +29,7 @@ bool push_state_changed"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       direction,integral,is_pressed,push_state_changed
+       direction,value,is_pressed
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -42,18 +39,15 @@ bool push_state_changed"""
       super(PowermateEvent, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
       if self.direction is None:
-        self.direction = 0
-      if self.integral is None:
-        self.integral = 0
+        self.direction = ''
+      if self.value is None:
+        self.value = 0
       if self.is_pressed is None:
         self.is_pressed = False
-      if self.push_state_changed is None:
-        self.push_state_changed = False
     else:
-      self.direction = 0
-      self.integral = 0
+      self.direction = ''
+      self.value = 0
       self.is_pressed = False
-      self.push_state_changed = False
 
   def _get_types(self):
     """
@@ -67,8 +61,17 @@ bool push_state_changed"""
     :param buff: buffer, ``StringIO``
     """
     try:
+      _x = self.direction
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_bq2B.pack(_x.direction, _x.integral, _x.is_pressed, _x.push_state_changed))
+      buff.write(_struct_qB.pack(_x.value, _x.is_pressed))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -79,12 +82,20 @@ bool push_state_changed"""
     """
     try:
       end = 0
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.direction = str[start:end].decode('utf-8')
+      else:
+        self.direction = str[start:end]
       _x = self
       start = end
-      end += 11
-      (_x.direction, _x.integral, _x.is_pressed, _x.push_state_changed,) = _struct_bq2B.unpack(str[start:end])
+      end += 9
+      (_x.value, _x.is_pressed,) = _struct_qB.unpack(str[start:end])
       self.is_pressed = bool(self.is_pressed)
-      self.push_state_changed = bool(self.push_state_changed)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -97,8 +108,17 @@ bool push_state_changed"""
     :param numpy: numpy python module
     """
     try:
+      _x = self.direction
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      if python3:
+        buff.write(struct.pack('<I%sB'%length, length, *_x))
+      else:
+        buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_struct_bq2B.pack(_x.direction, _x.integral, _x.is_pressed, _x.push_state_changed))
+      buff.write(_struct_qB.pack(_x.value, _x.is_pressed))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -110,15 +130,23 @@ bool push_state_changed"""
     """
     try:
       end = 0
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.direction = str[start:end].decode('utf-8')
+      else:
+        self.direction = str[start:end]
       _x = self
       start = end
-      end += 11
-      (_x.direction, _x.integral, _x.is_pressed, _x.push_state_changed,) = _struct_bq2B.unpack(str[start:end])
+      end += 9
+      (_x.value, _x.is_pressed,) = _struct_qB.unpack(str[start:end])
       self.is_pressed = bool(self.is_pressed)
-      self.push_state_changed = bool(self.push_state_changed)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_bq2B = struct.Struct("<bq2B")
+_struct_qB = struct.Struct("<qB")

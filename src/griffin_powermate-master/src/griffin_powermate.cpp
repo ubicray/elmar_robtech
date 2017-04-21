@@ -175,8 +175,8 @@ void PowerMate::processEvent(struct input_event *ev, ros::Publisher& ros_publish
       if(ev->code == REL_X)
 	{
 	ROS_INFO("You moved your mouse horizontally!; code=0x%04x, value=0x%08x\n", ev->code, ev->value);
-	ros_message.direction = ev->code;
-ros_message.integral = ev->value;
+	ros_message.direction = 'X';
+ros_message.value = ev->value;
 	ros_publisher.publish( ros_message );
 	}
 	
@@ -184,10 +184,11 @@ ros_message.integral = ev->value;
 {
 
 	ROS_INFO("You moved your mouse vertically!; code=0x%04x, value=0x%08x\n", ev->code, ev->value);
-ros_message.direction = ev->code;
-ros_message.integral = ev->value;
+ros_message.direction = 'Y';
+ros_message.value = ev->value;
 	ros_publisher.publish( ros_message );
 }
+	
       else
       {
 	// Reads direction value from turn knob
@@ -195,10 +196,8 @@ ros_message.integral = ev->value;
 	// Sums consecutive dir values to find integral
 	integral_ += (long long)dir;
 	// Composing a ros_message
-	ros_message.direction = dir;
-	ros_message.integral = integral_;
+	ros_message.value = integral_;
 	ros_message.is_pressed = pressed_;
-	ros_message.push_state_changed = false;
 	// Publish ros_message
 	ros_publisher.publish( ros_message );
 	//printf("Button was rotated %d units; Shift from start is now %d units\n", (int)ev->value, total_shift);
@@ -207,9 +206,17 @@ ros_message.integral = ev->value;
     case EV_KEY:				// Upon receiving data about pressing and depressing the dial button
 if(ev->code == BTN_LEFT)
 	{
-	ROS_INFO("You moved your mouse horizontally!; code=0x%04x, value=0x%08x\n", ev->code, ev->value);
-	ros_message.direction = ev->code;
-ros_message.integral = ev->value;
+	ROS_INFO("You clicked the left mouse button!; code=0x%04x, value=0x%08x\n", ev->code, ev->value);
+	
+ros_message.value = ev->value;
+ros_message.is_pressed = true;
+	ros_publisher.publish( ros_message );
+	}
+if(ev->code == BTN_RIGHT)
+	{
+	ROS_INFO("You clicked the right mouse button!; code=0x%04x, value=0x%08x\n", ev->code, ev->value);
+ros_message.value = ev->value;
+ros_message.is_pressed = true;
 	ros_publisher.publish( ros_message );
 	}
       

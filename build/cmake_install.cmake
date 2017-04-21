@@ -119,6 +119,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/tudeng/elmar_robtech/build/gtest/cmake_install.cmake")
   INCLUDE("/home/tudeng/elmar_robtech/build/griffin_powermate-master/cmake_install.cmake")
   INCLUDE("/home/tudeng/elmar_robtech/build/my_r2d2/cmake_install.cmake")
+  INCLUDE("/home/tudeng/elmar_robtech/build/my_turtle/cmake_install.cmake")
   INCLUDE("/home/tudeng/elmar_robtech/build/beginner_tutorials/cmake_install.cmake")
   INCLUDE("/home/tudeng/elmar_robtech/build/r2d2_navigator-master/cmake_install.cmake")
 
