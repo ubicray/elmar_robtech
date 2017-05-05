@@ -1,2 +1,2 @@
-beginner_tutorials:griffin_powermate-master:my_r2d2:my_turtle:r2d2_navigator-master
+beginner_tutorials:griffin_powermate-master:moveitconf:my_r2d2:my_turtle:planning_tutorial:r2d2_navigator-master
 -DCATKIN_DEVEL_PREFIX=/home/tudeng/elmar_robtech/devel -DCMAKE_INSTALL_PREFIX=/home/tudeng/elmar_robtech/install -G Unix Makefiles

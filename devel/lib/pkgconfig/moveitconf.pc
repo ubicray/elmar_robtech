@@ -1,0 +1,8 @@
+prefix=/home/tudeng/elmar_robtech/devel
+
+Name: moveitconf
+Description: Description of moveitconf
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/tudeng/elmar_robtech/devel/lib 
+Requires: 
