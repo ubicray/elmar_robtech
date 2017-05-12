@@ -1,0 +1,8 @@
+prefix=/home/tudeng/elmar_robtech/install
+
+Name: motomanplan
+Description: Description of motomanplan
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tudeng/elmar_robtech/install/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/tudeng/elmar_robtech/devel
+
+Name: motoman_planning
+Description: Description of motoman_planning
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/tudeng/elmar_robtech/devel/lib 
+Requires: 

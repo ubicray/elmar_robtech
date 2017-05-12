@@ -234,6 +234,20 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+planning_tutorial/CMakeFiles/motoman_planner.dir/rule:
+	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f CMakeFiles/Makefile2 planning_tutorial/CMakeFiles/motoman_planner.dir/rule
+.PHONY : planning_tutorial/CMakeFiles/motoman_planner.dir/rule
+
+# Convenience name for target.
+motoman_planner: planning_tutorial/CMakeFiles/motoman_planner.dir/rule
+.PHONY : motoman_planner
+
+# fast build rule for target.
+motoman_planner/fast:
+	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/motoman_planner.dir/build.make planning_tutorial/CMakeFiles/motoman_planner.dir/build
+.PHONY : motoman_planner/fast
+
+# Convenience name for target.
 planning_tutorial/CMakeFiles/move_group_interface_tutorial.dir/rule:
 	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f CMakeFiles/Makefile2 planning_tutorial/CMakeFiles/move_group_interface_tutorial.dir/rule
 .PHONY : planning_tutorial/CMakeFiles/move_group_interface_tutorial.dir/rule
@@ -569,6 +583,30 @@ visualization_msgs_generate_messages_py/fast:
 	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make planning_tutorial/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
 .PHONY : visualization_msgs_generate_messages_py/fast
 
+src/motoman_planner.o: src/motoman_planner.cpp.o
+.PHONY : src/motoman_planner.o
+
+# target to build an object file
+src/motoman_planner.cpp.o:
+	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/motoman_planner.dir/build.make planning_tutorial/CMakeFiles/motoman_planner.dir/src/motoman_planner.cpp.o
+.PHONY : src/motoman_planner.cpp.o
+
+src/motoman_planner.i: src/motoman_planner.cpp.i
+.PHONY : src/motoman_planner.i
+
+# target to preprocess a source file
+src/motoman_planner.cpp.i:
+	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/motoman_planner.dir/build.make planning_tutorial/CMakeFiles/motoman_planner.dir/src/motoman_planner.cpp.i
+.PHONY : src/motoman_planner.cpp.i
+
+src/motoman_planner.s: src/motoman_planner.cpp.s
+.PHONY : src/motoman_planner.s
+
+# target to generate assembly for a file
+src/motoman_planner.cpp.s:
+	cd /home/tudeng/elmar_robtech/build && $(MAKE) -f planning_tutorial/CMakeFiles/motoman_planner.dir/build.make planning_tutorial/CMakeFiles/motoman_planner.dir/src/motoman_planner.cpp.s
+.PHONY : src/motoman_planner.cpp.s
+
 src/move_group_interface_tutorial.o: src/move_group_interface_tutorial.cpp.o
 .PHONY : src/move_group_interface_tutorial.o
 
@@ -610,6 +648,7 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... motoman_planner"
 	@echo "... move_group_interface_tutorial"
 	@echo "... moveit_msgs_generate_messages_cpp"
 	@echo "... moveit_msgs_generate_messages_lisp"
@@ -636,6 +675,9 @@ help:
 	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... src/motoman_planner.o"
+	@echo "... src/motoman_planner.i"
+	@echo "... src/motoman_planner.s"
 	@echo "... src/move_group_interface_tutorial.o"
 	@echo "... src/move_group_interface_tutorial.i"
 	@echo "... src/move_group_interface_tutorial.s"

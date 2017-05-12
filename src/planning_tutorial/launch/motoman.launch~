@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find pr2_moveit_config)/launch/demo.launch"/>
+
+  <node name="motoman_planner" pkg="planning_tutorial" type="motoman_planner" respawn="false" output="screen">
+  </node>
+
+</launch>

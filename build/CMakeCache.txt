@@ -349,10 +349,22 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 
 //Value Computed by CMake
+motoman_planning_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/motoman_planning
+
+//Value Computed by CMake
+motoman_planning_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/motoman_planning
+
+//Value Computed by CMake
 motoman_sia5d_moveit_config_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/motoman_sia5d_moveit_config
 
 //Value Computed by CMake
 motoman_sia5d_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/motoman_sia5d_moveit_config
+
+//Value Computed by CMake
+motomanplan_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/motomanplan
+
+//Value Computed by CMake
+motomanplan_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/motomanplan
 
 //The directory containing a CMake configuration file for moveit_core.
 moveit_core_DIR:PATH=/opt/ros/indigo/share/moveit_core/cmake

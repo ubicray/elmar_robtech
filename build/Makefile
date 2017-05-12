@@ -566,6 +566,19 @@ geometry_msgs_generate_messages_py/fast:
 .PHONY : geometry_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named motoman_planner
+
+# Build rule for target.
+motoman_planner: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 motoman_planner
+.PHONY : motoman_planner
+
+# fast build rule for target.
+motoman_planner/fast:
+	$(MAKE) -f planning_tutorial/CMakeFiles/motoman_planner.dir/build.make planning_tutorial/CMakeFiles/motoman_planner.dir/build
+.PHONY : motoman_planner/fast
+
+#=============================================================================
 # Target rules for targets named move_group_interface_tutorial
 
 # Build rule for target.
@@ -1260,6 +1273,7 @@ help:
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... motoman_planner"
 	@echo "... move_group_interface_tutorial"
 	@echo "... moveit_msgs_generate_messages_cpp"
 	@echo "... moveit_msgs_generate_messages_lisp"
