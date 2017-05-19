@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: double_sia5
+    relative_path: urdf/model.urdf
+  SRDF:
+    relative_path: config/dual_arm.srdf
+  CONFIG:
+    author_name: Elmar
+    author_email: ubicray@gmail.com
+    generated_timestamp: 1495188697
