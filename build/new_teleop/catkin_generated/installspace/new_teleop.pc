@@ -1,0 +1,8 @@
+prefix=/home/tudeng/elmar_robtech/install
+
+Name: new_teleop
+Description: Description of new_teleop
+Version: 0.0.0
+Cflags: -I/home/tudeng/elmar_robtech/install/include
+Libs: -L/home/tudeng/elmar_robtech/install/lib 
+Requires: 

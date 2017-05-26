@@ -1,2 +1,2 @@
-beginner_tutorials:griffin_powermate-master:moveitconf:my_r2d2:my_turtle:planning_tutorial:r2d2_navigator-master
+beginner_tutorials:double_sia5:doublesiamoveconf:dual_manipulator_moveit_config:griffin_powermate-master:keyboard_reader:moveitconf:my_r2d2:my_turtle:new_teleop:planning_tutorial:r2d2_navigator-master:teleop_twist_keyboard
 -DCATKIN_DEVEL_PREFIX=/home/tudeng/elmar_robtech/devel -DCMAKE_INSTALL_PREFIX=/home/tudeng/elmar_robtech/install -G Unix Makefiles

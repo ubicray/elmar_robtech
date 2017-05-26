@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+import rospy
+from std_msgs.msg import String
+from geometry_msgs.msg import Twist
+from Key.msg import Key
+
+moving=False
+
+def callback(data):
+	moving= not moving
+	pub = rospy.Publisher('cmd_vel', Twist, queue_size = 1)
+	rospy.init_node('teleop')
+	#rospy.loginfo(cmd)
+
+
+
+	twist = Twist()
+	twist.linear.x = 0; twist.linear.y = 0; twist.linear.z = 0
+	twist.angular.x = 0; twist.angular.y = 0; twist.angular.z = 0
+
+	if (moving==True):
+		twist.linear.x=1
+
+	pub.publish(twist)
+	
+
+def listener():
+	rospy.init_node('listener', anonymous=True)
+	rospy.Subscriber("/keyboard",Key, callback)
+
+    # spin() simply keeps python from exiting until this node is stopped
+	rospy.spin()
+
+if __name__ == '__main__':
+listener()

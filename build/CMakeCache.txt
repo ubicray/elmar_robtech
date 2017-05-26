@@ -275,6 +275,24 @@ class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 
+//Value Computed by CMake
+double_sia5_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/double_sia5
+
+//Value Computed by CMake
+double_sia5_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/double_sia5
+
+//Value Computed by CMake
+doublesiamoveconf_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/doublesiamoveconf
+
+//Value Computed by CMake
+doublesiamoveconf_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/doublesiamoveconf
+
+//Value Computed by CMake
+dual_manipulator_moveit_config_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/dual_manipulator_moveit_config
+
+//Value Computed by CMake
+dual_manipulator_moveit_config_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/dual_manipulator_moveit_config
+
 //The directory containing a CMake configuration file for eigen_conversions.
 eigen_conversions_DIR:PATH=/opt/ros/indigo/share/eigen_conversions/cmake
 
@@ -335,6 +353,15 @@ image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
 
 //The directory containing a CMake configuration file for kdl_parser.
 kdl_parser_DIR:PATH=/opt/ros/indigo/share/kdl_parser/cmake
+
+//Value Computed by CMake
+keyboard_reader_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/keyboard_reader
+
+//Dependencies for the target
+keyboard_reader_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Value Computed by CMake
+keyboard_reader_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/keyboard_reader
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/libtf2.so
@@ -411,6 +438,12 @@ my_turtle_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/my_turtle
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
 
+//Value Computed by CMake
+new_teleop_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/new_teleop
+
+//Value Computed by CMake
+new_teleop_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/new_teleop
+
 //The directory containing a CMake configuration file for object_recognition_msgs.
 object_recognition_msgs_DIR:PATH=/opt/ros/indigo/share/object_recognition_msgs/cmake
 
@@ -479,6 +512,12 @@ srdfdom_DIR:PATH=/opt/ros/indigo/share/srdfdom/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
+
+//Value Computed by CMake
+teleop_twist_keyboard_BINARY_DIR:STATIC=/home/tudeng/elmar_robtech/build/teleop_twist_keyboard
+
+//Value Computed by CMake
+teleop_twist_keyboard_SOURCE_DIR:STATIC=/home/tudeng/elmar_robtech/src/teleop_twist_keyboard
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
@@ -615,7 +654,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=9
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=15
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
